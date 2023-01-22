@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.dokidoki {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.invert {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    background-color: rgb(250, 183, 218);
+    padding: 40px;
+    gap: 50px;
+    font-size: 20px !important; 
+    list-style-type: none;
+}
+
+.divbouton {
+    display: flex;
+    justify-content: center;
+}
+
+#bouton {
+    padding: 10px;
+    padding-left: 30%;
+    padding-right: 30%;
+    background-color: rgb(250, 183, 218);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px white solid;
+    border-radius: 2em;
+}
+
+.div1 {
+    background-image: url(images/bg.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.s1 {
+  display: flex;
+  flex-direction: column;
+    width : 650px;
+}
+
+.character {
+    justify-content: center;
+    margin: 10px;
+    width: 100%;
+    border: 4mm solid rgb(255, 255, 255);
+    border-radius: 3em;
+}
+
+.hidden {
+  display: none;
+  visibility: collapse;
+}
+
+.monika {
+  width: 800px;
+  height: 650px;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    background-image: url(images/bg2.jpg);
+    border: 4mm solid rgb(255, 255, 255);
+    border-radius: 3em;
+}
+
+.p1 {
+    display: flex;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-image: url(images/textbox.png);
+    width: 100%;
+    padding: 60px;
+    margin-bottom: 20px;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+.div2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    background-image: url(images/catwp.png);
+}
+
+.p2 {
+    padding: 60px;
+    width: 50%;
+}
+
+.size {
+    font-size: 52px;
+}
+
+.glitch {
+    animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+div:before,
+div:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+div:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+div:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
